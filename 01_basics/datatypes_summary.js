@@ -50,3 +50,36 @@ Return type of variables in JavaScript
        Object  =>  object
 
 */
+
+
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(primitive),Heap Memory(Non primitive)
+//stack=>copy of the original variable
+//heap=>we get the reference of original value,any modifications will change the original value also
+
+
+let myYouTubename="kushalshawyt.com"
+
+let anotherName=myYouTubename;
+anotherName="shawkushal"
+console.log(myYouTubename)
+console.log(anotherName)
+
+//value dont change because a copy is passed as they are primitive
+
+let user1={
+    email:"shaw",
+    upi:"kushal"
+}
+
+let user2=user1;
+
+user2.email="kushal24252";
+ console.log(user1.email)
+ console.log(user2.email)
+
+ //both the value changes because both are objects and hence non-primitive
