@@ -47,4 +47,4 @@ console.log(myN)
   slice but not in splice and also when we splice the 
   original array changes and all elements which we splice comes
   off.
-  *./
+  */
