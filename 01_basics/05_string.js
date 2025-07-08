@@ -19,8 +19,7 @@ const newString=gameName.substring(0,4); //with last being exclusive
 console.log(newString)
 
 
-const anotherString=gameName.slice(-8,4); //length+startIndex,endIndex
-console.log(anotherString)
+
 
 const newName="     kushal      "
 console.log(newName.trim());
@@ -31,4 +30,8 @@ console.log(url.replace('kushal','dhrub'))
 
 console.log(gameName.split("-")) //.split=>string to array with reference to a sperator present
 
-
+const anotherString=gameName.slice(-16,8); //length+startIndex,endIndex
+console.log(anotherString)
+const gameName11 = new String('hiteshhc')
+const anotherString1= gameName11.slice(-8, 4)
+console.log(anotherString1);
