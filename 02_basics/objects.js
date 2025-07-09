@@ -73,3 +73,39 @@ const obj2={
  console.log(Object.values(tinderUser))
 
  console.log(Object.entries(tinderUser))  //[[key,value],[key2,value2]]
+
+
+
+ const course={
+    coursename:"js in hindi",
+    price:999,
+    courseprof:"hitesh",
+ }
+ //console.log(course.price)
+
+ const {price:rupess}=course  //one technique to access,we can also rename
+ console.log(rupess) //destructuring
+
+ const navbar=({company})=>{
+}
+navbar(company="playground")
+
+{//json
+  "name" :"kushal",
+  "price" :999,
+}
+{   //JSON
+  "username": "kristinward",
+  "sex": "F", 
+  "address": "122 Powell Trace Suite 016, Lloydport, SC 08075",
+  "name": "Katherine Gill",
+  "email": "jestrada@gmail.com",
+  "birthday": "1958-04-05"
+}
+
+
+[  //API
+   {},
+   {},
+    {}
+]
