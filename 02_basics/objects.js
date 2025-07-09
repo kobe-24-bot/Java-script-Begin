@@ -32,3 +32,44 @@ JsUser.greeting=function(){
 }
 console.log(JsUser.greeting)
 console.log(JsUser.greeting())
+
+const tinderUser=new Object() //singleton object
+//const tinder={}  // non singleton object
+
+tinderUser.id="1234r"
+tinderUser.isLoggedIn=false;
+tinderUser.name="kushalshaw"
+
+ //console.log(tinderUser)
+
+ const regularUser={
+    email:"taniashaw",
+    fullname:{
+        userfullname:{
+            firstname:"atul",
+            lastname:"kumar"
+        }
+    }
+ }
+ console.log(regularUser.fullname?.userfullname.firstname)
+ /*
+ just access all nested objects using (.) operator
+ */
+const obj1={
+    1:"a",
+    2:"b"
+}
+const obj2={
+    3:"c",
+    4:"d"
+}
+ //const obj3=Object.assign({},obj1,obj2) //merging objects
+ //console.log(obj3)
+
+ const obj3={...obj1,...obj2};
+ console.log(obj3)
+
+ console.log(Object.keys(obj1))  //all keys get stored in way of array
+ console.log(Object.values(tinderUser))
+
+ console.log(Object.entries(tinderUser))  //[[key,value],[key2,value2]]
