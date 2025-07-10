@@ -33,5 +33,33 @@ function loginUser(username){
     }
     return `${username} just logged in`
 }
-console.log(loginUser())
+console.log(loginUser()) //undefined argument passed
 console.log(loginUser("Kushal"))
+
+//if we don't have how many parameters will be there
+function calculateCarPrice(...num1){ //...=>rest operator
+   return num1;
+}
+console.log(calculateCarPrice(200,400,500))
+
+const user={
+    username:"kushal",
+    price:200
+}
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+//handleObject(user) //passings object as argument
+handleObject({
+    username:"kush",
+    price:5000
+}) //passing object as argument directly
+
+//Arrays in functions
+const Array=[200,800,100]
+
+function ArrayFun(getArr){
+    return getArr[1]
+}
+console.log(ArrayFun(Array))
+console.log(ArrayFun([200,300,400]))
