@@ -53,7 +53,7 @@ var c=30;
  }
  console.log(addone(5))
 
- const addTwo=function(num){ //expression
+ const addTwo=function(num){ //expression(function inside a variable)
     return num+2;
  }
  console.log(addTwo(5))
