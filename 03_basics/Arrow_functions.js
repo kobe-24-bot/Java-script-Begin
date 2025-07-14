@@ -19,7 +19,7 @@ function chai(){
 }
 chai()
 
-//Arrow Function
+//Arrow Function....()=>{}
 const arrow= () =>{
   let username="kushal"
   console.log(username)
@@ -29,5 +29,5 @@ arrow()
 
 //Implicit return
 //const addTwo=(num1,num2)=>num1+num2 //no return keyword
-const addTwo=(num1,num2)=>({username:"kushal"})  //returning argument
+const addTwo=(num1,num2)=>({username:"kushal"})  //returning object
 console.log(addTwo(5,6))
