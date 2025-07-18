@@ -28,6 +28,6 @@ const arrow= () =>{
 arrow()
 
 //Implicit return
-//const addTwo=(num1,num2)=>num1+num2 //no return keyword
+//const addTwo=(num1,num2)=>num1+num2 //no return keyword,if no scope is used
 const addTwo=(num1,num2)=>({username:"kushal"})  //returning object
 console.log(addTwo(5,6))
