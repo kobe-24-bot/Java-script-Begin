@@ -14,7 +14,7 @@
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <li><a style="color: blue;" href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
 </body>
@@ -29,13 +29,38 @@
    document.getElementById('owl').addEventListener('click',function(e){
     console.log(e);  //e=>EventObject
     console.log(e.timeStamp)
-  
+    //alert("Owl clicked");
    },false)
    //type,timesStamp,defaultPrevented,target,secElement,currentTarget
-   //
+   //clientX,clientY,screenX,screenY,pageX,pageY
+   //altkey,ctrlKey,shiftKey,metaKey,keyCode
 
-
+ //What is Event Propagation?
+    //Event Bubbling=>false(default)=>bottom to top
+    //Event Capturing=>true=>top to bottom
+    
    
-</script>
+  /* document.getElementById('images').addEventListener('click',function(e){
+    console.log("click inside the ul")
+   },false)
+   document.getElementById('owl').addEventListener('click',function(e){
+    console.log("click owl")
+    e.stopPropagation();
+   },false)
+   */
+    document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault();//prevent default action
+    console.log("Google link clicked");
+    //alert("Google link clicked");
+    },false)
 
+    document.querySelector('#images').addEventListener('click',function(e){
+        let removeIt=e.target.parentNode
+        console.log(e.target)
+        removeIt.remove()
+       // console.log(document.querySelector('#owl'))
+        // console.log(document.getElementById('images'))
+    },false)
+    
+</script>
 </html>
