@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="submit">Submit</button>
+    <input id="name"type="text" placeholder="Enter your Name"></input>
+    <h2 id="kushal"></h2>
+</body>
+<script>
+   
+   document.getElementById('submit').addEventListener('click',function(e){
+   const name=document.getElementById('name').value.toString();
+   const result=document.getElementById('kushal');
+  
+   if(typeof name!=="string"){
+     
+    
+    result.innerHTML="Please enter a valid name";
+    //document.querySelector('#kushal').appendChild(result);
+   }else{
+     
+   result.innerHTML=`Hello ${name}, Welcome to Chai aur Code`;
+   //document.querySelector('#kushal').appendChild(result);
+}
+   },false)
+    //setTimeout();
+</script>
+</html>
