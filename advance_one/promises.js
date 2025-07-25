@@ -51,3 +51,38 @@ promise4.then((user)=>{
 }).catch(function(err){
     console.log(err);
 })
+
+const promise5=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error=false;
+        if(!error){
+            resolve({username:"javascript",password:"1234"})
+        }
+        else{
+            reject("Error:Chal chal went wrong")
+        }
+    },1000)
+});
+ async function consumePromise5(){
+  const response=await promise5;
+  console.log(response);
+ }
+ consumePromise5()
+
+ /*async function getAllUsers(){
+    try{
+        const response=await fetch('https://jsonplaceholder.typicode.com/users')
+    const data=await response.json();
+    console.log(data);
+    }catch(error){
+        console.log("error")
+    }
+}
+ getAllUsers();*/
+
+ fetch('https://jsonplaceholder.typicode.com/users').then(function(response){
+    return response.json();
+ }).then((data)=>{
+    console.log(data)
+ }).catch((error)=>console.log("Error fetching data"))
+ 
