@@ -83,3 +83,9 @@ user2.email="kushal24252";
  console.log(user2.email)
 
  //both the value changes because both are objects and hence non-primitive
+
+ /*primitive=>a copy of the original datatype is passed ,any change
+ in the copy will not change the original value
+non-primitive=>a reference of the original datatype is passed,
+any change in the reference will change the original value
+*/
